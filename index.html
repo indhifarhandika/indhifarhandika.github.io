@@ -3,8 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>iTools Project</title>
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <link rel=”icon” type=”image/png” href=”itools.png”>
     <style media="screen">
-    .ind{animation: indhi 5s linear 2s infinite alternate}
+    .ind{animation: indhi 5s linear 2s infinite alternate;
+      font-family: 'VT323', monospace; font-size: 80px;
+      margin-top: -10px
+    }
+    .it{font-family: 'VT323', monospace;margin-top: -50px; font-size: 40px}
     @keyframes indhi {
        0%   {color:red}
        25%  {color:yellow}
@@ -13,14 +19,42 @@
        100% {color:red}
       }
       body{background-color : black}
+      .gambar{margin-top: -20px}
+      .kata{font-size: 40px;font-family: 'VT323', monospace;color: white;margin-top: -40px}
+      .contact{color: white}
+      .mail:link {
+          color: white;
+          background-color: transparent;
+          text-decoration: none;
+      }
+      .mail:hover {
+          color: white;
+          background-color: transparent;
+          text-decoration: underline;
+      }
+      .mail:active {
+          color: white;
+          background-color: transparent;
+          text-decoration: underline;
+      }
     </style>
   </head>
   <body>
     <div align = 'center'>
-     <img src="https://d21ii91i3y6o6h.cloudfront.net/gallery_images/from_proof/1350/large/1400592601/programmer.png" style="width:150px;height:150px;border:0" title="iTools Dev"/>
+     <img src="https://d21ii91i3y6o6h.cloudfront.net/gallery_images/from_proof/1350/large/1400592601/programmer.png" style="width:200px;height:200px;border:0" title="iTools Developer"/>
     </div>
     <div>
      <h1 class="ind" align = 'center'>INDHI FARHANDIKA</h1>
-     <h1 align = 'center'><font color = 'white'>iTools Project</font></h1>
+     <h1 class='it' align = 'center'><font color = 'white'>iTools Project</font></h1>
+   </div>
+   <div class="gambar" align = "center">
+     <a href="https://github.com/indhifarhandika/iTools"><img src="https://png.icons8.com/color/1600/github" style="width:130px";height="130px" title="My Link"/></a>
+   </div>
+   <div class="kata" align="center">
+     <p>Programming is an Art form</p>
+   </div>
+   <div class="contact" align = "center">
+     <p>Contact me : <a class="mail" href="mailto:indhi.farhandika@programmer.net" title="Email" rel="nofollow">indhi.farhandika@programmer.net</a></p>
+   </div>
   </body>
 </html>
