@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <title>iTools</title>
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
-    <link rel="shortcut icon" href="/logo/itools.ICO" type="image/x-icon">
+    <link rel="shortcut icon" href="logo/itools.ICO" type="image/x-icon">
     <style media="screen">
     .ind{animation: indhi 5s linear 2s infinite alternate;
       font-family: 'VT323', monospace; font-size: 80px;
-      margin-top: -10px
+      margin-top: -1%
     }
-    .it{font-family: 'VT323', monospace;margin-top: -50px; font-size: 40px}
+    .it{font-family: 'VT323', monospace;margin-top: -3%; font-size: 40px}
     @keyframes indhi {
        0%   {color:red}
        25%  {color:yellow}
@@ -19,8 +19,8 @@
        100% {color:red}
       }
       body{background-color : black}
-      .gambar{margin-top: -20px}
-      .kata{font-size: 40px;font-family: 'VT323', monospace;color: white;margin-top: -40px}
+      .gambar{margin-top: -2%}
+      .kata{font-size: 40px;font-family: 'VT323', monospace;color: white;margin-top: -3%}
       .contact{color: white}
       .mail:link {
           color: white;
@@ -37,18 +37,38 @@
           background-color: transparent;
           text-decoration: underline;
       }
+      .button {
+        background-color: grey; /* Green */
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+
+    .windows:hover{background-color: green;color: white}
+    .windows{font-size: 15px;background-color: white; animation: indhi 5s linear 2s infinite alternate; border: 2px solid #4CAF50}
+    .linux:hover{background-color: yellow; color: grey}
+    .linux{font-size: 15px;background-color: white; animation: indhi 5s linear 2s infinite alternate; border: 2px solid yellow}
     </style>
   </head>
   <body>
     <div align = 'center'>
-     <img src="/logo/i.png" style="width:200px;height:200px;border:0" title="iTools Developer"/>
+     <img src="logo/i.png" style="width:200px;height:200px;border:0" title="iTools Developer"/>
     </div>
     <div>
      <h1 class="ind" align = 'center'>INDHI FARHANDIKA</h1>
      <h1 class='it' align = 'center'><font color = 'white'>iTools Developer</font></h1>
    </div>
    <div class="gambar" align = "center">
-     <a href="https://github.com/indhifarhandika/iTools"><img src="/logo/github.png" style="width:130px";height="130px" title="https://github.com/indhifarhandika/iTools"/></a>
+     <a href="windows.html"><button class="button windows">Windows</button></a>
+    <a href="linux.html"><button class="button linux">Linux</button></a>
    </div>
    <div class="kata" align="center">
      <p>Programming is an Art form</p>
