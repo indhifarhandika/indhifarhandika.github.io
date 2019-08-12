@@ -1,4 +1,4 @@
-{
+var data = {
   "name": [
     "Python 3 Tutorial Course",
     "HTML Fundamentals Course",
