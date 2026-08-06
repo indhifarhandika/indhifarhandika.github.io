@@ -1,56 +1,675 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
+    <meta name="description"
+        content="Indhi Farhandika Rochimansyah - Senior Software Engineer & Full-Stack Architect Web Portfolio Profile. Modern Obsidian Dark Theme.">
+    <meta name="author" content="Indhi Farhandika Rochimansyah">
+    <title>Indhi Farhandika Rochimansyah | Software Engineer</title>
 
-    <title>
-            I F R
-    </title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
-    
-    <link rel="stylesheet" href="https://themes.gohugo.io//theme/hallo-hugo/css/style.css">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <style>
-    	#hov:hover { 
-			fill: #2f2d2d
-		}
-    </style>
-    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body style="background-color: #19dbec">
 
-<main>
-    <div class="block introduction">
-        <div class="column left">
-            <img src="/logo/indhifr.png" class="portrait" alt="Portrait" />
-        </div>
-        <div class="column right"><!--<h1>I F R</h1>--><h2 style="margin-top: 40px">INDHI FARHANDIKA ROCHIMANSYAH.</h2>
-            <p>I am Programmer <!-- React Native <img style="width: 20px; height: 20px;margin-bottom: -3px;margin-left: -3px;" src="https://img.icons8.com/nolan/64/000000/react-native.png">,-->Python <img style="width: 20px; height: 20px;margin-bottom: -3px;margin-left: -3px;" src="https://img.icons8.com/color/48/000000/python.png"> and PHP <img style="width: 20px; height: 20px;margin-bottom: -3px;" src="https://img.icons8.com/officel/40/000000/php-logo.png">. Like to learn new things, especially about computer technology.</p>
+<body>
 
-            <div class="links"><a rel="me" href="mailto:indhifarhandika@gmail.com" title="E-mail">
-                        <span class="fas fa-envelope"></span>
-                    </a><a rel="me" href="https://www.github.com/indhifarhandika" target="_blank" title="Github">
-                        <span class="fab fa-github"></span>
-                    </a><a rel="me" href="https://www.twitter.com/indhiodi" target="_blank" title="Twitter">
-                        <span class="fab fa-twitter"></span>
-                    </a><a rel="me" href="https://www.linkedin.com/in/indhifarhandika" target="_blank" title="LinkdIn">
-                        <span class="fab fa-linkedin"></span>
-                    </a><a rel="me" href="https://t.me/Indhifarhandika" target="_blank" title="Telegram">
-                        <span class="fab fa-telegram"></span>
-                    </a><a rel="me" href="https://www.instagram.com/indhifarhandika/" target="_blank" title="Instagram">
-                        <span class="fab fa-instagram"></span>
-                    </a><a rel="me" href="https://www.python.org/users/indhifarhandika/" target="_blank" title="Python Software Foundation">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 32 32" style="fill:#ffffff; margin-bottom: -6px; margin-left: -6px;"><path id="hov" d="M 16 5 C 11.011719 5 11 7 11 7 L 11 11 L 17 11 L 17 12 L 7 12 C 7 12 4 11.539063 4 17 C 4 22.460938 7 22 7 22 L 10 22 L 10 20.375 C 10 17.964844 11.964844 16 14.375 16 L 17.625 16 C 19.484375 16 21 15.484375 21 13.625 L 21 7 C 21 7 20.988281 5 16 5 Z M 13 7 C 13.550781 7 14 7.449219 14 8 C 14 8.550781 13.550781 9 13 9 C 12.449219 9 12 8.550781 12 8 C 12 7.449219 12.449219 7 13 7 Z M 22 11 L 22 13.625 C 22 16.035156 20.035156 17 17.625 17 L 14.375 17 C 12.515625 17 11 18.515625 11 20.375 L 11 26 C 11 26 11.0625 28 16 28 C 20.9375 28 21 26 21 26 L 21 22 L 15 22 L 15 21 L 25 21 C 25 21 28 21.503906 28 16 C 28 10.496094 25 11 25 11 Z M 19 24 C 19.550781 24 20 24.449219 20 25 C 20 25.550781 19.550781 26 19 26 C 18.449219 26 18 25.550781 18 25 C 18 24.449219 18.449219 24 19 24 Z"></path></svg>
-                    </a></div>
+    <!-- Ambient Particle Canvas & Glows -->
+    <canvas id="bg-canvas"></canvas>
+    <div class="ambient-glow glow-top-left"></div>
+    <div class="ambient-glow glow-bottom-right"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                IFR <span class="logo-badge">DEV</span>
+            </a>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#terminal" class="nav-link">Terminal</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="status-badge">
+                    <span class="pulse-dot"></span>
+                    <span>Available for Projects</span>
+                </div>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
-    </div></main>
-	<script language="JavaScript">
-		document.addEventListener("contextmenu", function(e){
-			e.preventDefault();
-		}, false);
-	</script>
-	</body>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-tag">
+                        <i class="fas fa-code"></i> Software Engineering
+                    </div>
+                    <h1 class="hero-title">
+                        INDHI FARHANDIKA <br>
+                        <span class="text-gradient">ROCHIMANSYAH</span>
+                    </h1>
+                    <div class="typing-container">
+                        <span class="typing-prefix">&gt;</span>
+                        <span class="typing-text" id="typing-text"></span>
+                        <span class="cursor"></span>
+                    </div>
+                    <p class="hero-description">
+                        Specialized in crafting high-performance web & mobile applications, microservices architecture,
+                        system automation, and scalable software solutions using Python, PHP, React, & Flutter.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i> Explore Portfolio
+                        </a>
+                        <a href="#terminal" class="btn btn-secondary">
+                            <i class="fas fa-terminal"></i> Open CLI Terminal
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i class="fas fa-paper-plane"></i> Contact Me
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="profile-card-wrapper">
+                        <div class="floating-badge badge-python">
+                            <i class="fab fa-python"></i> Python 3
+                        </div>
+                        <div class="floating-badge badge-react">
+                            <i class="fab fa-react"></i> React / Mobile
+                        </div>
+
+                        <div class="profile-card">
+                            <div class="profile-avatar-container">
+                                <img src="logo/IMG_78712.jpg" alt="Indhi Farhandika Rochimansyah" class="profile-avatar"
+                                    onerror="this.src='https://ui-avatars.com/api/?name=Indhi+Farhandika&background=0D1117&color=06B6D4&size=150'">
+                            </div>
+                            <h3 class="profile-card-title">Indhi Farhandika R.</h3>
+                            <p class="profile-card-subtitle">Software Engineer</p>
+
+                            <div class="profile-stats-grid">
+                                <div class="stat-item">
+                                    <div class="stat-number text-gradient">5+</div>
+                                    <div class="stat-label">Years Experience</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number text-gradient">10+</div>
+                                    <div class="stat-label">Projects Completed</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number text-gradient">100%</div>
+                                    <div class="stat-label">Clean Code</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">01. About Me</span>
+                <h2 class="section-title">Innovation Through <span>Code & Architecture</span></h2>
+            </div>
+
+            <div class="glass-card" style="padding: 2.5rem; margin-bottom: 3rem;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                    <div>
+                        <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--accent-cyan);">
+                            <i class="fas fa-user-astronaut"></i> Professional Bio
+                        </h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                            I am a Software Engineer focused on building secure, efficient, and scalable software
+                            systems. Driven by a deep passion for computer technology, I specialize in complex backend
+                            systems, cross-platform mobile apps, and data science automation.
+                        </p>
+                        <p style="color: var(--text-secondary);">
+                            Driven by a strong commitment to continuous learning, certified by global institutions
+                            including IBM Cognitive Class, SoloLearn, and TestDome.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--accent-violet);">
+                            <i class="fas fa-layer-group"></i> Engineering Philosophy
+                        </h3>
+                        <ul style="list-style: none; color: var(--text-secondary);">
+                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;">
+                                <i class="fas fa-check-circle" style="color: var(--accent-emerald);"></i> Clean,
+                                Maintainable, & Testable Code
+                            </li>
+                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;">
+                                <i class="fas fa-check-circle" style="color: var(--accent-emerald);"></i> Microservices
+                                & Modern API Standards
+                            </li>
+                            <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;">
+                                <i class="fas fa-check-circle" style="color: var(--accent-emerald);"></i> User-Centric
+                                Interface & High Performance
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 0.8rem;">
+                                <i class="fas fa-check-circle" style="color: var(--accent-emerald);"></i> Continuous
+                                Learning & Adaptability
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Terminal Section -->
+    <section class="terminal-section" id="terminal">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">02. Developer Console</span>
+                <h2 class="section-title">Interactive <span>CLI Terminal</span></h2>
+            </div>
+
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="term-btn term-btn-close"></span>
+                        <span class="term-btn term-btn-min"></span>
+                        <span class="term-btn term-btn-max"></span>
+                    </div>
+                    <div class="terminal-title">indhifarhandika@dev-shell: ~ (zsh)</div>
+                    <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-cyan);">v2.4.0
+                    </div>
+                </div>
+
+                <div class="terminal-body" id="terminal-body">
+                    <div class="term-line initial">
+                        Welcome to the Developer CLI Console! Type <span
+                            style="color: var(--accent-cyan); font-weight: bold;">'help'</span> to view available
+                        commands.
+                    </div>
+                    <div class="term-line initial">
+                        Try typing <span style="color: var(--accent-emerald); font-weight: bold;">'bio'</span>, <span
+                            style="color: var(--accent-emerald); font-weight: bold;">'skills'</span>, <span
+                            style="color: var(--accent-emerald); font-weight: bold;">'projects'</span>, or <span
+                            style="color: var(--accent-emerald); font-weight: bold;">'sudo hire'</span>.
+                    </div>
+
+                    <div class="term-input-line" id="terminal-input-line">
+                        <span class="term-prompt">ifr@dev</span>:<span class="term-path">~</span>$&nbsp;
+                        <input type="text" class="term-input" id="terminal-input" placeholder="type command..."
+                            autocomplete="off">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Command Chips -->
+            <div class="term-command-list" style="justify-content: center; margin-top: 1.5rem;">
+                <span class="term-chip" onclick="runTerminalCommand('help')">help</span>
+                <span class="term-chip" onclick="runTerminalCommand('bio')">bio</span>
+                <span class="term-chip" onclick="runTerminalCommand('skills')">skills</span>
+                <span class="term-chip" onclick="runTerminalCommand('projects')">projects</span>
+                <span class="term-chip" onclick="runTerminalCommand('certs')">certs</span>
+                <span class="term-chip" onclick="runTerminalCommand('contact')">contact</span>
+                <span class="term-chip" onclick="runTerminalCommand('sudo hire')">sudo hire</span>
+                <span class="term-chip" onclick="runTerminalCommand('clear')">clear</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Tech Stack Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">03. Expertise & Tech Stack</span>
+                <h2 class="section-title">Tech Stack & <span>Core Competencies</span></h2>
+            </div>
+
+            <div class="skills-grid">
+                <div class="glass-card skill-card">
+                    <div class="skill-icon" style="color: #3776AB;"><i class="fab fa-python"></i></div>
+                    <div class="skill-name">Python</div>
+                    <div class="skill-level">Backend & Data</div>
+                </div>
+                <div class="glass-card skill-card">
+                    <div class="skill-icon" style="color: #777BB4;"><i class="fab fa-php"></i></div>
+                    <div class="skill-name">PHP</div>
+                    <div class="skill-level">Web Development</div>
+                </div>
+                <div class="glass-card skill-card">
+                    <div class="skill-icon" style="color: #F7DF1E;"><i class="fab fa-js"></i></div>
+                    <div class="skill-name">JavaScript</div>
+                    <div class="skill-level">Full-Stack / ES6+</div>
+                </div>
+                <div class="glass-card skill-card">
+                    <div class="skill-icon" style="color: #61DAFB;"><i class="fab fa-react"></i></div>
+                    <div class="skill-name">React / Native</div>
+                    <div class="skill-level">Frontend & Mobile</div>
+                </div>
+                <div class="glass-card skill-card">
+                    <div class="skill-icon" style="color: #02569B;"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="skill-name">Flutter / Dart</div>
+                    <div class="skill-level">Cross-Platform App</div>
+                </div>
+                <div class="glass-card skill-card">
+                    <div class="skill-icon" style="color: #003B57;"><i class="fas fa-database"></i></div>
+                    <div class="skill-name">PostgreSQL / MySQL</div>
+                    <div class="skill-level">Database Design</div>
+                </div>
+                <div class="glass-card skill-card">
+                    <div class="skill-icon" style="color: #2496ED;"><i class="fab fa-docker"></i></div>
+                    <div class="skill-name">Docker</div>
+                    <div class="skill-level">Containerization</div>
+                </div>
+                <div class="glass-card skill-card">
+                    <div class="skill-icon" style="color: #F05032;"><i class="fab fa-git-alt"></i></div>
+                    <div class="skill-name">Git & GitHub</div>
+                    <div class="skill-level">Version Control</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">04. Portfolio Showcase</span>
+                <h2 class="section-title">Featured <span>Engineering Projects</span></h2>
+            </div>
+
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Applications</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                <button class="filter-btn" data-filter="tool">Tools & CLI</button>
+            </div>
+
+            <div class="projects-grid" id="projects-container">
+                <!-- Dynamically populated via js/main.js reading project.json -->
+                <div style="text-align: center; color: var(--text-muted); grid-column: 1/-1;">
+                    <i class="fas fa-spinner fa-spin"></i> Loading projects...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="certificates" id="certificates">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">05. Official Certifications</span>
+                <h2 class="section-title">Certificates & <span>Qualifications</span></h2>
+            </div>
+
+            <div class="certificates-grid" id="certificates-container">
+                <!-- Dynamically populated via js/main.js reading certificate.json -->
+                <div style="text-align: center; color: var(--text-muted); grid-column: 1/-1;">
+                    <i class="fas fa-spinner fa-spin"></i> Loading certificate data...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">06. Career & Experience</span>
+                <h2 class="section-title">Engineering <span>Journey</span></h2>
+            </div>
+
+            <div class="timeline">
+                <!-- 1. PT Aplikasi Rakyat Indonesia -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card timeline-content">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.4rem;">
+                            <div class="timeline-date" style="margin-bottom: 0;">Nov 2025 - Present</div>
+                            <span class="glass-pill"
+                                style="font-size: 0.72rem; padding: 0.2rem 0.6rem; color: var(--accent-cyan); border-color: rgba(6, 182, 212, 0.3);"><i
+                                    class="fas fa-laptop-house"></i> Remote</span>
+                        </div>
+                        <h3 class="timeline-role">Frontend Developer</h3>
+                        <div class="timeline-company">PT Aplikasi Rakyat Indonesia &bull; Jakarta, Indonesia</div>
+                        <p class="timeline-desc">Specialized in Payment Point Online Banking (PPOB) platforms. Developed
+                            mobile & web frontend applications, integrated payment gateways, implemented secure
+                            transaction flows, and optimized performance for scalability.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Pasar Kuota -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card timeline-content">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.4rem;">
+                            <div class="timeline-date" style="margin-bottom: 0;">Mar 2025 - Present</div>
+                            <span class="glass-pill"
+                                style="font-size: 0.72rem; padding: 0.2rem 0.6rem; color: var(--accent-emerald); border-color: rgba(16, 185, 129, 0.3);"><i
+                                    class="fas fa-network-wired"></i> Hybrid</span>
+                        </div>
+                        <h3 class="timeline-role">Mobile Application Developer</h3>
+                        <div class="timeline-company">Pasar Kuota &bull; Mojokerto, East Java, Indonesia</div>
+                        <p class="timeline-desc">Developed Android & cross-platform Flutter applications including Pasar
+                            Kuota Apps, Danalink Apps, and Pasar Games Apps.</p>
+                    </div>
+                </div>
+
+                <!-- 3. GATI -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card timeline-content">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.4rem;">
+                            <div class="timeline-date" style="margin-bottom: 0;">Aug 2025 - Nov 2025</div>
+                            <span class="glass-pill"
+                                style="font-size: 0.72rem; padding: 0.2rem 0.6rem; color: var(--accent-cyan); border-color: rgba(6, 182, 212, 0.3);"><i
+                                    class="fas fa-laptop-house"></i> Remote</span>
+                        </div>
+                        <h3 class="timeline-role">Lead Frontend Developer</h3>
+                        <div class="timeline-company">GATI &bull; Jakarta, Indonesia</div>
+                        <p class="timeline-desc">Led technical delivery, reviewed code quality before merge, managed
+                            release pipelines, and built PPOB digital payment interfaces with seamless backend API
+                            integrations.</p>
+                    </div>
+                </div>
+
+                <!-- 3. GATI -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card timeline-content">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.4rem;">
+                            <div class="timeline-date" style="margin-bottom: 0;">May 2025 - Aug 2025</div>
+                            <span class="glass-pill"
+                                style="font-size: 0.72rem; padding: 0.2rem 0.6rem; color: var(--accent-cyan); border-color: rgba(6, 182, 212, 0.3);"><i
+                                    class="fas fa-laptop-house"></i> Remote</span>
+                        </div>
+                        <h3 class="timeline-role">Frontend Developer</h3>
+                        <div class="timeline-company">GATI &bull; Jakarta, Indonesia</div>
+                        <p class="timeline-desc">Focused on building seamless user experiences for both mobile and web
+                            platforms, with specialization in Payment Point Online Banking (PPOB) applications.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 4. Nukar ID -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card timeline-content">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.4rem;">
+                            <div class="timeline-date" style="margin-bottom: 0;">Aug 2024 - Apr 2025</div>
+                            <span class="glass-pill"
+                                style="font-size: 0.72rem; padding: 0.2rem 0.6rem; color: var(--accent-violet); border-color: rgba(139, 92, 246, 0.3);"><i
+                                    class="fas fa-building"></i> On-site</span>
+                        </div>
+                        <h3 class="timeline-role">Full Stack & Mobile Developer</h3>
+                        <div class="timeline-company">Nukar ID &bull; Tasikmalaya, West Java, Indonesia</div>
+                        <p class="timeline-desc">Engineered full-stack and mobile solutions for key projects including
+                            Nukar Apps and Kodika Apps.</p>
+                    </div>
+                </div>
+
+                <!-- 5. PT Yafira Digital Technology -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card timeline-content">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.4rem;">
+                            <div class="timeline-date" style="margin-bottom: 0;">Nov 2019 - Jun 2024</div>
+                            <span class="glass-pill"
+                                style="font-size: 0.72rem; padding: 0.2rem 0.6rem; color: var(--accent-violet); border-color: rgba(139, 92, 246, 0.3);"><i
+                                    class="fas fa-building"></i> On-site</span>
+                        </div>
+                        <h3 class="timeline-role">Full Stack Developer</h3>
+                        <div class="timeline-company">PT Yafira Digital Technology &bull; Lamongan, East Java, Indonesia
+                        </div>
+                        <p class="timeline-desc">Served 4+ years delivering scalable web and backend applications,
+                            RESTful APIs, database design, and web architecture.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Dinas Tanaman Pangan & Holtikultura -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card timeline-content">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.4rem;">
+                            <div class="timeline-date" style="margin-bottom: 0;">Feb 2019 - Mar 2019</div>
+                            <span class="glass-pill"
+                                style="font-size: 0.72rem; padding: 0.2rem 0.6rem; color: var(--accent-violet); border-color: rgba(139, 92, 246, 0.3);"><i
+                                    class="fas fa-building"></i> On-site</span>
+                        </div>
+                        <h3 class="timeline-role">Software Engineering Intern</h3>
+                        <div class="timeline-company">Dinas Tanaman Pangan dan Holtikultura &bull; East Java, Indonesia
+                        </div>
+                        <p class="timeline-desc">Developed automated Bot Dinas application for municipal operational
+                            workflow support.</p>
+                    </div>
+                </div>
+
+                <!-- 7. PT Telkom Akses -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card timeline-content">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.4rem;">
+                            <div class="timeline-date" style="margin-bottom: 0;">Feb 2016 - May 2016</div>
+                            <span class="glass-pill"
+                                style="font-size: 0.72rem; padding: 0.2rem 0.6rem; color: var(--accent-violet); border-color: rgba(139, 92, 246, 0.3);"><i
+                                    class="fas fa-building"></i> On-site</span>
+                        </div>
+                        <h3 class="timeline-role">Network & Technical Intern</h3>
+                        <div class="timeline-company">PT. TELKOM AKSES &bull; Indonesia</div>
+                        <p class="timeline-desc">Gained foundational experience in network infrastructure and
+                            telecommunications systems.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Sub-Section -->
+            <div style="margin-top: 4rem;">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <h3 style="font-size: 1.6rem; color: var(--accent-cyan);">
+                        <i class="fas fa-graduation-cap"></i> Education
+                    </h3>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                    <div class="glass-card" style="padding: 1.5rem;">
+                        <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.3rem;">Universitas
+                            Islam Lamongan (Unisla)</h4>
+                        <p
+                            style="color: var(--accent-cyan); font-family: var(--font-mono); font-size: 0.85rem; margin-bottom: 0.5rem;">
+                            Bachelor's degree, Informatics Engineering</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.5rem;">2026 - 2027</p>
+                        <span class="glass-pill"
+                            style="font-size: 0.75rem; color: var(--accent-emerald); border-color: rgba(16, 185, 129, 0.3);"><i
+                                class="fas fa-award"></i> IPK / GPA: -</span>
+                    </div>
+                    <div class="glass-card" style="padding: 1.5rem;">
+                        <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.3rem;">Politeknik
+                            Elektronika Negeri Surabaya</h4>
+                        <p
+                            style="color: var(--accent-cyan); font-family: var(--font-mono); font-size: 0.85rem; margin-bottom: 0.5rem;">
+                            Associate's degree, Informatics Engineering</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.5rem;">2017 - 2019</p>
+                        <span class="glass-pill"
+                            style="font-size: 0.75rem; color: var(--accent-emerald); border-color: rgba(16, 185, 129, 0.3);"><i
+                                class="fas fa-award"></i> IPK / GPA: 3.70 / 4.00</span>
+                    </div>
+                    <div class="glass-card" style="padding: 1.5rem;">
+                        <h4 style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 0.3rem;">SMKN 2
+                            Lamongan</h4>
+                        <p
+                            style="color: var(--accent-cyan); font-family: var(--font-mono); font-size: 0.85rem; margin-bottom: 0.5rem;">
+                            Computer & Network Engineering</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.5rem;">2014 - 2017</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section class="publications" id="publications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">07. Research & Papers</span>
+                <h2 class="section-title">International <span>Publications</span></h2>
+            </div>
+
+            <div class="glass-card" style="padding: 2rem; position: relative; overflow: hidden;">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
+                    <div>
+                        <span class="glass-pill"
+                            style="font-size: 0.75rem; color: var(--accent-cyan); border-color: rgba(6, 182, 212, 0.3); margin-bottom: 0.8rem;">
+                            <i class="fas fa-book-open"></i> International Research Paper
+                        </span>
+                        <h3
+                            style="font-size: 1.35rem; color: var(--text-primary); margin-top: 0.5rem; margin-bottom: 0.4rem;">
+                            Design an MVC Model Using Python for Flask Framework Development
+                        </h3>
+                        <p style="color: var(--accent-cyan); font-family: var(--font-mono); font-size: 0.88rem;">
+                            Author: Indhi Farhandika Rochimansyah
+                        </p>
+                    </div>
+                    <a href="https://ieeexplore.ieee.org/document/8901656" target="_blank" class="btn btn-outline"
+                        style="padding: 0.5rem 1.2rem; font-size: 0.85rem;">
+                        <i class="fas fa-file-pdf"></i> Read Paper
+                    </a>
+                </div>
+                <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6;">
+                    Research publication focusing on architectural design patterns in Python Flask, standardizing
+                    Model-View-Controller (MVC) structures, dependency injection, and scalable web framework
+                    development.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">08. Get In Touch</span>
+                <h2 class="section-title">Let's Build <span>Together</span></h2>
+            </div>
+
+            <div class="contact-grid">
+                <div class="glass-card contact-info-card">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 1.5rem;">Contact Information</h3>
+
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <div class="info-title">Email</div>
+                            <a href="mailto:work@indhifarhandika.dev" class="info-value">work@indhifarhandika.dev</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fab fa-telegram-plane"></i></div>
+                        <div>
+                            <div class="info-title">Telegram</div>
+                            <a href="https://t.me/Indhifarhandika" target="_blank"
+                                class="info-value">@Indhifarhandika</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <div class="info-title">Location</div>
+                            <div class="info-value">Indonesia (Open to Remote Worldwide)</div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.github.com/indhifarhandika" target="_blank" class="social-btn"
+                            title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/indhifarhandika" target="_blank" class="social-btn"
+                            title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://t.me/Indhifarhandika" target="_blank" class="social-btn" title="Telegram">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="glass-card contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="contact-name" class="form-label">Your Name</label>
+                            <input type="text" id="contact-name" class="form-control"
+                                placeholder="Enter your full name..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email" class="form-label">Email Address</label>
+                            <input type="email" id="contact-email" class="form-control" placeholder="name@example.com"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message" class="form-label">Message / Project Inquiry</label>
+                            <textarea id="contact-message" class="form-control"
+                                placeholder="Write your message or project requirements here..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div>
+                &copy; 1999 <strong>Indhi Farhandika</strong>. All rights reserved.
+            </div>
+            <div>
+                Built with <i class="fas fa-heart" style="color: var(--accent-pink);"></i> & Clean Code Standard
+            </div>
+            <button class="back-to-top" id="back-to-top" title="Back to top">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+    </footer>
+
+    <!-- JavaScript Dependencies -->
+    <script src="js/terminal.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
 </html>

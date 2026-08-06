@@ -1,0 +1,91 @@
+[
+  {
+    "id": "flask-mvc",
+    "title": "Flask MVC Framework",
+    "category": "web",
+    "description": "Standardized MVC Boilerplate & Architecture for Python Flask with dynamic routing, ORM integration, and clean-code structure.",
+    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80",
+    "tags": [
+      "Python",
+      "Flask",
+      "MVC",
+      "v1.4"
+    ],
+    "github": "https://github.com/indhifarhandika/flask-mvc",
+    "demo": ""
+  },
+  {
+    "id": "lunardump",
+    "title": "LunarDump CLI Tool",
+    "category": "tool",
+    "description": "High-performance CLI database dumper & automated backup utility designed for seamless database migration and backup operations.",
+    "image": "https://private-user-images.githubusercontent.com/28488788/630199973-d2a4805a-e374-46df-ba9e-176aaa6affad.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODYwMDQ4NTMsIm5iZiI6MTc4NjAwNDU1MywicGF0aCI6Ii8yODQ4ODc4OC82MzAxOTk5NzMtZDJhNDgwNWEtZTM3NC00NmRmLWJhOWUtMTc2YWFhNmFmZmFkLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA4MDYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwODA2VDA4MjIzM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWUzZTg0NGRkZjY0OTMzMWVkNTcwMGJhMjBjYjhkZThkZTdkODVjZDkwODZhYmE3NGU4NWI1YjI4Y2Q4OWY0OTMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.7uvDakRHZh8QOqmT2ZLy7eHHS7rBQ7kjjDX3vK2v8uA",
+    "tags": [
+      "Python",
+      "DevOps",
+      "CLI",
+      "Database",
+      "Backup"
+    ],
+    "github": "https://github.com/indhifarhandika/LunarDump",
+    "demo": "lunardump.indhifarhandika.dev"
+  },
+  {
+    "id": "cryptography-suite",
+    "title": "Cryptography Suite",
+    "category": "tool",
+    "description": "High-speed data encryption and decryption utility suite using modern algorithms (AES, RSA, Hashing) for maximum security.",
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80",
+    "tags": [
+      "Python",
+      "Security",
+      "Encryption",
+      "CLI"
+    ],
+    "github": "https://github.com/indhifarhandika",
+    "demo": ""
+  },
+  {
+    "id": "pdf-utility",
+    "title": "PDF Processing Utility",
+    "category": "tool",
+    "description": "Automated PDF Merge and Split utility tool for fast and efficient document processing without quality loss.",
+    "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80",
+    "tags": [
+      "Python",
+      "Automation",
+      "PDF Engine"
+    ],
+    "github": "https://github.com/indhifarhandika",
+    "demo": ""
+  },
+  {
+    "id": "mobile-kuota",
+    "title": "Pasar Kuota Mobile & E-Commerce",
+    "category": "mobile",
+    "description": "Cross-platform digital e-commerce mobile app for quota transactions and digital payments with real-time push notifications.",
+    "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80",
+    "tags": [
+      "Flutter",
+      "React Native",
+      "REST API",
+      "FCM"
+    ],
+    "github": "https://github.com/indhifarhandika",
+    "demo": ""
+  },
+  {
+    "id": "nukar-app",
+    "title": "Nukar Apps & Kodika Apps",
+    "category": "mobile",
+    "description": "Full-stack mobile application suite for item exchange and digital service management built with responsive UX and payment APIs.",
+    "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=600&q=80",
+    "tags": [
+      "Flutter",
+      "Node.js",
+      "Mobile App"
+    ],
+    "github": "https://github.com/indhifarhandika",
+    "demo": ""
+  }
+]
