@@ -273,8 +273,11 @@ async function loadProjects() {
 
         const tagsHtml = tags.map(tag => `<span class="tag">${escapeHTML(tag)}</span>`).join('');
 
-        const demoLinkHtml = demo
-          ? `<a href="https://${escapeHTML(demo)}" target="_blank" class="icon-btn" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>`
+        const demoUrl = demo
+          ? (demo.startsWith('http://') || demo.startsWith('https://') ? demo : `https://${demo}`)
+          : '';
+        const demoLinkHtml = demoUrl
+          ? `<a href="${escapeHTML(demoUrl)}" target="_blank" rel="noopener noreferrer" class="icon-btn" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>`
           : '';
 
         const card = document.createElement('div');

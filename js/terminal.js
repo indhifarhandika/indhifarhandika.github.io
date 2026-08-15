@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   <span class="text-gradient">bio</span>       - Brief developer biography
   <span class="text-gradient">skills</span>    - Core technical stack & expertise
   <span class="text-gradient">projects</span>  - Highlighted engineering projects
+  <span class="text-gradient">lunarpy</span>   - LunarPy-Labs platform & ecosystem
   <span class="text-gradient">certs</span>     - Official certifications
   <span class="text-gradient">contact</span>   - Get in touch & social channels
   <span class="text-gradient">whoami</span>    - Display your session info
@@ -37,10 +38,23 @@ Passionate about code optimization, algorithm design, clean architecture, and mo
 
     projects: `Featured Projects:
 ---------------------------------------
-1. Flask MVC Framework (v1.4)  - Standardized Python Web MVC Architecture
-2. Cryptography Engine (v1.2)  - Data Encryption & Security Suite
-3. PDF Merge Utility (v1.1)    - High-Performance PDF Processing Utility
-4. Mobile Kuota & E-Commerce   - Cross-Platform Digital Commerce Application`,
+1. LunarPy-Labs Platform     - Python Open-Source Ecosystem (lunarpy-labs.indhifarhandika.dev)
+2. Flask MVC Framework (v1.4)- Standardized Python Web MVC Architecture
+3. Cryptography Engine (v1.2)- Data Encryption & Security Suite
+4. PDF Merge Utility (v1.1)  - High-Performance PDF Processing Utility
+5. Mobile Kuota & E-Commerce - Cross-Platform Digital Commerce Application`,
+
+    lunarpy: `LunarPy-Labs Platform & Organization:
+---------------------------------------
+Web URL     : https://lunarpy-labs.indhifarhandika.dev
+GitHub Org  : https://github.com/LunarPy-Labs
+Description : Developer-focused open-source ecosystem for Python tools, ORM frameworks, database utilities, and developer projects.`,
+
+    labs: `LunarPy-Labs Platform & Organization:
+---------------------------------------
+Web URL     : https://lunarpy-labs.indhifarhandika.dev
+GitHub Org  : https://github.com/LunarPy-Labs
+Description : Developer-focused open-source ecosystem for Python tools, ORM frameworks, database utilities, and developer projects.`,
 
     certs: `Verified Certifications:
 ---------------------------------------
